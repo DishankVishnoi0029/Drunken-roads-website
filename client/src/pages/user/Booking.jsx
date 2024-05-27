@@ -43,7 +43,7 @@ const Booking = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `/api/package/get-package-data/${params?.packageId}`
+        `${import.meta.env.VITE_URL}/api/package/get-package-data/${params?.packageId}`
       );
       const data = await res.json();
       if (data?.success) {
@@ -77,7 +77,7 @@ const Booking = () => {
   //get paymentgateway token
   const getToken = async () => {
     try {
-      const { data } = await axios.get(`/api/package/braintree/token`);
+      const { data } = await axios.get(`${import.meta.env.VITE_URL}/api/package/braintree/token`);
       setClientToken(data?.clientToken);
     } catch (error) {
       console.log(error);
@@ -101,7 +101,7 @@ const Booking = () => {
     }
     try {
       setLoading(true);
-      const res = await fetch(`/api/booking/book-package/${params?.id}`, {
+      const res = await fetch(`${import.meta.env.VITE_URL}/api/booking/book-package/${params?.id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
