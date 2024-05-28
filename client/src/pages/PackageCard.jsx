@@ -60,7 +60,7 @@ const PackageCard = ({ packageData }) => {
               </p>
             ) : (
               <p className="font-medium text-green-700">
-                ${packageData.packagePrice}
+                ₹ ${packageData.packagePrice}
               </p>
             )}
           </div>
