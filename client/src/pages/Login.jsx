@@ -71,7 +71,7 @@ const Login = () => {
               type="email"
               id="email"
               className="p-3 rounded border border-black bg-white bg-opacity-80"
-              // onChange={handleChange}
+              onChange={handleChange}
             />
           </div>
           <div className="flex flex-col">
@@ -82,7 +82,7 @@ const Login = () => {
               type="password"
               id="password"
               className="p-3 rounded border border-black bg-white bg-opacity-80"
-              // onChange={handleChange}
+              onChange={handleChange}
             />
           </div>
           <p className="text-blue-700 text-sm hover:underline">
